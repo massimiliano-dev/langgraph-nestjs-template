@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T11:11:32+00:00",
+  "title": "Design System: Agent chat",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Working Paper",
+        "canonical": "oklch(97.2% 0.003 248)",
+        "tonalRamp": ["#101213", "#28292a", "#414244", "#626365", "#848688", "#a9abad", "#ccced0", "#edeff1"]
+      },
+      "paper-raised": {
+        "role": "neutral",
+        "displayName": "Clean Sheet",
+        "canonical": "oklch(100.0% 0.000 90)",
+        "tonalRamp": ["#121212", "#292929", "#424242", "#636363", "#868686", "#ababab", "#cecece", "#eeeeee"]
+      },
+      "user-tint": {
+        "role": "neutral",
+        "displayName": "Operator Tint",
+        "canonical": "oklch(93.1% 0.010 248)",
+        "tonalRamp": ["#0e1216", "#25292e", "#3e4348", "#5f6469", "#81878c", "#a6abb1", "#c9ced4", "#e9eff5"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Slate Ink",
+        "canonical": "oklch(23.7% 0.028 245)",
+        "tonalRamp": ["#07131d", "#1d2a36", "#364451", "#566572", "#798896", "#9dadbc", "#bfd0df", "#e0f1ff"]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "oklch(45.4% 0.029 248)",
+        "tonalRamp": ["#07131e", "#1e2a37", "#364451", "#576573", "#798897", "#9dadbd", "#c0d0e0", "#e0f1ff"]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Paper Rule",
+        "canonical": "oklch(88.7% 0.013 244)",
+        "tonalRamp": ["#0d1217", "#242a2f", "#3d4349", "#5d646a", "#80878e", "#a4acb3", "#c7cfd6", "#e8f0f7"]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus Blue",
+        "canonical": "oklch(51.8% 0.182 258)",
+        "tonalRamp": ["#000544", "#002462", "#0037a0", "#005dc8", "#3483f1", "#5baaff", "#7dceff", "#bcf1ff"]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Failure Red",
+        "canonical": "oklch(50.0% 0.182 30)",
+        "tonalRamp": ["#370000", "#560000", "#8a0000", "#b42318", "#de4f3f", "#ff7663", "#ff9a85", "#ffd0bf"]
+      },
+      "board": {
+        "role": "neutral",
+        "displayName": "Strip Board Slate",
+        "canonical": "oklch(26.1% 0.024 254)",
+        "tonalRamp": ["#0a121c", "#212a35", "#39434f", "#5a6471", "#7c8795", "#a0acba", "#c3cfde", "#e4f0ff"]
+      },
+      "board-2": {
+        "role": "neutral",
+        "displayName": "Board Raised",
+        "canonical": "oklch(30.6% 0.035 257)",
+        "tonalRamp": ["#071221", "#1e293a", "#374355", "#576477", "#79879c", "#9dacc1", "#c0cfe5", "#e0f0ff"]
+      },
+      "board-rule": {
+        "role": "neutral",
+        "displayName": "Board Rule",
+        "canonical": "oklch(37.7% 0.045 261)",
+        "tonalRamp": ["#061125", "#1c293f", "#35435b", "#55647e", "#7787a2", "#9bacc8", "#bdcfec", "#def0ff"]
+      },
+      "board-ink": {
+        "role": "neutral",
+        "displayName": "Board Ink",
+        "canonical": "oklch(94.0% 0.009 243)",
+        "tonalRamp": ["#0e1215", "#25292d", "#3e4347", "#5f6468", "#81878b", "#a6acb0", "#c9cfd3", "#e9eff4"]
+      },
+      "board-ink-2": {
+        "role": "neutral",
+        "displayName": "Board Muted Ink",
+        "canonical": "oklch(73.2% 0.023 246)",
+        "tonalRamp": ["#09131b", "#202a34", "#39444e", "#596570", "#7b8893", "#a0adb9", "#c2d0dc", "#e3f0fd"]
+      },
+      "board-focus": {
+        "role": "neutral",
+        "displayName": "Board Focus Cyan",
+        "canonical": "oklch(83.7% 0.060 222)",
+        "tonalRamp": ["#001624", "#002f3e", "#154959", "#396b7c", "#5d8fa0", "#81b4c6", "#a3d7ea", "#c3f8ff"]
+      },
+      "strip-ink": {
+        "role": "neutral",
+        "displayName": "Strip Ink",
+        "canonical": "oklch(23.4% 0.029 237)",
+        "tonalRamp": ["#05131d", "#1b2b36", "#344550", "#546672", "#768996", "#9aaebb", "#bdd1df", "#ddf2ff"]
+      },
+      "lookup": {
+        "role": "secondary",
+        "displayName": "Lookup Cyan",
+        "canonical": "oklch(83.7% 0.060 222)",
+        "tonalRamp": ["#001624", "#002f3e", "#154959", "#396b7c", "#5d8fa0", "#81b4c6", "#a3d7ea", "#c3f8ff"]
+      },
+      "lookup-holder": {
+        "role": "secondary",
+        "displayName": "Holder Teal",
+        "canonical": "oklch(77.3% 0.074 223)",
+        "tonalRamp": ["#001629", "#003043", "#004a5f", "#2a6c82", "#5090a7", "#75b6cd", "#97d9f2", "#b8faff"]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Clearance Yellow",
+        "canonical": "oklch(87.3% 0.140 94)",
+        "tonalRamp": ["#230a00", "#3d2400", "#5b3d00", "#7e5f00", "#a38300", "#c8a82a", "#eccb56", "#ffed8d"]
+      },
+      "action-holder": {
+        "role": "primary",
+        "displayName": "Holder Ochre",
+        "canonical": "oklch(80.5% 0.150 91)",
+        "tonalRamp": ["#240800", "#3e2200", "#603a00", "#835d00", "#a78100", "#cea609", "#f2ca47", "#ffec8d"]
+      },
+      "rejected": {
+        "role": "tertiary",
+        "displayName": "Rejection Rose",
+        "canonical": "oklch(80.4% 0.090 7)",
+        "tonalRamp": ["#2e000b", "#4b0f21", "#692b3a", "#8e4c5a", "#b56f7d", "#dc93a1", "#ffb5c4", "#ffd6e4"]
+      },
+      "rejected-holder": {
+        "role": "tertiary",
+        "displayName": "Rose Holder",
+        "canonical": "oklch(72.9% 0.111 7)",
+        "tonalRamp": ["#330009", "#51011f", "#702238", "#974558", "#be687a", "#e78c9e", "#ffafc1", "#ffcfe1"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Empty-state title only; 1.5rem below 900px."
+      },
+      "headline": {
+        "displayName": "Pending Action",
+        "purpose": "Plain-language action name on the pending strip."
+      },
+      "title": {
+        "displayName": "Strip Title",
+        "purpose": "Action names on logged strips; at 600 the brand name and board heading."
+      },
+      "body": {
+        "displayName": "Reading",
+        "purpose": "Conversation text at a ~34rem measure."
+      },
+      "body-small": {
+        "displayName": "Reading Small",
+        "purpose": "Strip descriptions, argument values, notices, board notes."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Speaker names, bay/log headings, argument section heading."
+      },
+      "numerals": {
+        "displayName": "Numerals",
+        "purpose": "Callsigns, times, ids, counts; tabular figures."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Raw tool id under the action name; JSON argument editor."
+      }
+    },
+    "shadows": [
+      {
+        "name": "strip-contact",
+        "value": "0 1px 0 rgb(0 0 0 / 0.3), 0 8px 16px -10px rgb(0 0 0 / 0.7)",
+        "purpose": "Every strip on the board; nothing else casts a shadow."
+      },
+      {
+        "name": "holder-stub-inset",
+        "value": "inset 0.5rem 0 0 var(--lookup-holder)",
+        "purpose": "Draws the holder stub on reference chips (action chips use --action-holder); not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every transition and animation."
+      },
+      {
+        "name": "state-colour",
+        "value": "160ms",
+        "purpose": "Button and card colour/border changes."
+      },
+      {
+        "name": "mark-draw",
+        "value": "420ms",
+        "purpose": "Tick and strike drawn onto a strip on decision."
+      },
+      {
+        "name": "strip-slide",
+        "value": "460ms",
+        "purpose": "View transition moving a strip from bay to log; instant under reduced motion."
+      },
+      {
+        "name": "drawer",
+        "value": "320ms",
+        "purpose": "Mobile strip drawer slide."
+      },
+      {
+        "name": "waiting-ring",
+        "value": "6s linear infinite",
+        "purpose": "Turning dashed ring for Waiting and the agent-writing indicator."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "899px",
+        "purpose": "At or below: board becomes a drawer, pending strip docks above the composer."
+      }
+    ],
+    "layout": {
+      "boardWidth": "24rem",
+      "readingMeasure": "34rem",
+      "drawerWidth": "min(26rem, 92vw)",
+      "dockMaxHeight": "58dvh"
+    }
+  },
+  "components": [
+    {
+      "name": "Send Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action on paper: sends the message.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Send <svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3.5 10h11M10.5 5.5 15 10l-4.5 4.5\"/></svg></button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; min-height:2.5rem; padding:0 1rem; border:1px solid transparent; border-radius:var(--radius, 3px); font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); font-weight:600; font-size:0.9375rem; cursor:pointer; transition:background-color 160ms cubic-bezier(0.16,1,0.3,1), border-color 160ms cubic-bezier(0.16,1,0.3,1); } .ds-btn:focus-visible { outline:3px solid var(--focus, #0b63ce); outline-offset:2px; } .ds-btn-primary { background:var(--ink, #13202b); color:#fff; } .ds-btn-primary:hover { background:#24394b; } .ds-btn-primary:disabled { opacity:0.55; cursor:not-allowed; }"
+    },
+    {
+      "name": "Approve and Run",
+      "kind": "button",
+      "refersTo": "button-approve",
+      "description": "Clears the pending action strip; always paired with Reject in the sticky decision bar.",
+      "html": "<div style=\"background:var(--action, #f4d35e);padding:1rem;display:flex;gap:0.5rem;flex-wrap:wrap\"><button class=\"ds-btn ds-btn-approve\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4.5 10.5 8.5 14.5 15.5 6\"/></svg> Approve and run</button><button class=\"ds-btn ds-btn-reject\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5.5 5.5l9 9M14.5 5.5l-9 9\"/></svg> Reject</button></div>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; min-height:2.5rem; padding:0 1rem; border:1px solid transparent; border-radius:var(--radius, 3px); font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); font-weight:600; font-size:0.9375rem; cursor:pointer; transition:background-color 160ms cubic-bezier(0.16,1,0.3,1), border-color 160ms cubic-bezier(0.16,1,0.3,1); } .ds-btn:focus-visible { outline:3px solid var(--focus, #0b63ce); outline-offset:2px; } .ds-btn-approve { flex:1 1 auto; background:var(--strip-ink, #10202a); color:#fff; } .ds-btn-approve:hover { background:#2a3b48; } .ds-btn-reject { flex:1 1 auto; background:transparent; color:var(--strip-ink, #10202a); border-color:rgb(16 32 42 / 0.55); } .ds-btn-reject:hover { background:rgb(16 32 42 / 0.08); } .ds-btn-approve:focus-visible, .ds-btn-reject:focus-visible { outline-color:var(--strip-ink, #10202a); }"
+    },
+    {
+      "name": "Quiet Board Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Bordered button on the slate shell (New thread, Strips).",
+      "html": "<div style=\"background:var(--board, #1c2530);padding:1rem\"><button class=\"ds-btn ds-btn-quiet\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 4.5v11M4.5 10h11\"/></svg> New thread</button></div>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; min-height:2.5rem; padding:0 1rem; border:1px solid transparent; border-radius:var(--radius, 3px); font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); font-weight:600; font-size:0.9375rem; cursor:pointer; transition:background-color 160ms cubic-bezier(0.16,1,0.3,1), border-color 160ms cubic-bezier(0.16,1,0.3,1); } .ds-btn:focus-visible { outline:3px solid var(--focus, #0b63ce); outline-offset:2px; } .ds-btn-quiet { background:transparent; color:var(--board-ink, #e6ecf1); border-color:var(--board-rule, #34425a); } .ds-btn-quiet:hover { background:var(--board-2, #243041); } .ds-btn-quiet:focus-visible { outline-color:var(--board-focus, #9fd3e6); }"
+    },
+    {
+      "name": "Composer",
+      "kind": "input",
+      "refersTo": "input-composer",
+      "description": "Pinned message field; turns operator tint and states the blocker while an approval waits.",
+      "html": "<textarea class=\"ds-composer\" rows=\"2\" placeholder=\"Write a message. Enter sends, Shift+Enter adds a line.\"></textarea>",
+      "css": ".ds-composer { width:24rem; min-height:3rem; padding:0.75rem 1rem; resize:none; background:var(--paper-raised, #fff); color:var(--ink, #13202b); border:1px solid var(--rule, #d3dbe2); border-radius:var(--radius, 3px); font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); font-size:1.0625rem; line-height:1.45; } .ds-composer::placeholder { color:var(--ink-2, #4a5866); } .ds-composer:focus-visible { outline:3px solid var(--focus, #0b63ce); outline-offset:2px; } .ds-composer:disabled { background:var(--user-tint, #e3e9ef); }"
+    },
+    {
+      "name": "Lookup Strip (Done)",
+      "kind": "custom",
+      "refersTo": "strip-lookup",
+      "description": "Logged read-only tool call: cyan body, teal holder stub with callsign, time and class word, drawn tick.",
+      "html": "<div style=\"background:var(--board, #1c2530);padding:1rem\"><article class=\"ds-strip \"><div class=\"ds-strip-holder\"><span class=\"ds-callsign\">S-01</span><span>12:08</span><span class=\"ds-class\">Lookup</span></div><div class=\"ds-strip-body\"><h4 class=\"ds-tool\">Search the documents</h4><p class=\"ds-id\">search_docs</p></div><span class=\"ds-mark\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" stroke=\"var(--strip-ink, #10202a)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 15l5 5 11-12\"/></svg><span>Done</span></span></article></div>",
+      "css": ".ds-strip { --s: var(--lookup, #9fd3e6); --h: var(--lookup-holder, #7fc0d8); display:grid; grid-template-columns:3.75rem minmax(0,1fr) 3.5rem; width:22rem; background:var(--s); color:var(--strip-ink, #10202a); border-radius:var(--radius, 3px); box-shadow:0 1px 0 rgb(0 0 0 / 0.3), 0 8px 16px -10px rgb(0 0 0 / 0.7); font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); } .ds-strip.ds-action { --s: var(--action, #f4d35e); --h: var(--action-holder, #e3bb34); } .ds-strip.ds-rejected { --s: var(--rejected, #f2a7b5); --h: var(--rejected-holder, #e3899b); } .ds-strip.ds-rejected .ds-tool { text-decoration:line-through; text-decoration-thickness:2px; } .ds-strip.ds-failed .ds-strip-holder { background:var(--danger, #b42318); color:#fff; } .ds-strip-holder { display:flex; flex-direction:column; gap:2px; padding:0.75rem 0.5rem; background:var(--h); border-radius:var(--radius, 3px) 0 0 var(--radius, 3px); font-family:var(--face-cond, 'Barlow Semi Condensed', 'Arial Narrow', sans-serif); font-variant-numeric:tabular-nums; letter-spacing:0.02em; font-size:0.8125rem; line-height:1.2; } .ds-callsign { font-weight:700; font-size:1rem; } .ds-class { margin-top:0.25rem; font-weight:600; font-size:0.75rem; } .ds-strip-body { padding:0.75rem; min-width:0; } .ds-tool { margin:0; font-family:var(--face-cond, 'Barlow Semi Condensed', 'Arial Narrow', sans-serif); font-weight:700; font-size:1.1875rem; line-height:1.2; } .ds-id { margin:2px 0 0; font-family:var(--face-code, ui-monospace, Menlo, monospace); font-size:0.8125rem; color:rgb(16 32 42 / 0.78); } .ds-mark { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; padding:0.5rem 0.25rem; border-left:1px solid rgb(16 32 42 / 0.18); font-family:var(--face-cond, 'Barlow Semi Condensed', sans-serif); font-size:0.75rem; font-weight:600; } .ds-mark path { stroke-dasharray:32; animation:ds-draw 420ms cubic-bezier(0.16,1,0.3,1) both; } @keyframes ds-draw { from { stroke-dashoffset:32; } }"
+    },
+    {
+      "name": "Action Strip (Approved)",
+      "kind": "custom",
+      "refersTo": "strip-action",
+      "description": "Logged side-effect tool call the human cleared.",
+      "html": "<div style=\"background:var(--board, #1c2530);padding:1rem\"><article class=\"ds-strip ds-action\"><div class=\"ds-strip-holder\"><span class=\"ds-callsign\">S-02</span><span>12:08</span><span class=\"ds-class\">Action</span></div><div class=\"ds-strip-body\"><h4 class=\"ds-tool\">Send an email</h4><p class=\"ds-id\">send_email</p></div><span class=\"ds-mark\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" stroke=\"var(--strip-ink, #10202a)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 15l5 5 11-12\"/></svg><span>Approved</span></span></article></div>",
+      "css": ".ds-strip { --s: var(--lookup, #9fd3e6); --h: var(--lookup-holder, #7fc0d8); display:grid; grid-template-columns:3.75rem minmax(0,1fr) 3.5rem; width:22rem; background:var(--s); color:var(--strip-ink, #10202a); border-radius:var(--radius, 3px); box-shadow:0 1px 0 rgb(0 0 0 / 0.3), 0 8px 16px -10px rgb(0 0 0 / 0.7); font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); } .ds-strip.ds-action { --s: var(--action, #f4d35e); --h: var(--action-holder, #e3bb34); } .ds-strip.ds-rejected { --s: var(--rejected, #f2a7b5); --h: var(--rejected-holder, #e3899b); } .ds-strip.ds-rejected .ds-tool { text-decoration:line-through; text-decoration-thickness:2px; } .ds-strip.ds-failed .ds-strip-holder { background:var(--danger, #b42318); color:#fff; } .ds-strip-holder { display:flex; flex-direction:column; gap:2px; padding:0.75rem 0.5rem; background:var(--h); border-radius:var(--radius, 3px) 0 0 var(--radius, 3px); font-family:var(--face-cond, 'Barlow Semi Condensed', 'Arial Narrow', sans-serif); font-variant-numeric:tabular-nums; letter-spacing:0.02em; font-size:0.8125rem; line-height:1.2; } .ds-callsign { font-weight:700; font-size:1rem; } .ds-class { margin-top:0.25rem; font-weight:600; font-size:0.75rem; } .ds-strip-body { padding:0.75rem; min-width:0; } .ds-tool { margin:0; font-family:var(--face-cond, 'Barlow Semi Condensed', 'Arial Narrow', sans-serif); font-weight:700; font-size:1.1875rem; line-height:1.2; } .ds-id { margin:2px 0 0; font-family:var(--face-code, ui-monospace, Menlo, monospace); font-size:0.8125rem; color:rgb(16 32 42 / 0.78); } .ds-mark { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; padding:0.5rem 0.25rem; border-left:1px solid rgb(16 32 42 / 0.18); font-family:var(--face-cond, 'Barlow Semi Condensed', sans-serif); font-size:0.75rem; font-weight:600; } .ds-mark path { stroke-dasharray:32; animation:ds-draw 420ms cubic-bezier(0.16,1,0.3,1) both; } @keyframes ds-draw { from { stroke-dashoffset:32; } }"
+    },
+    {
+      "name": "Rejected Strip",
+      "kind": "custom",
+      "refersTo": "strip-rejected",
+      "description": "Human rejection only: rose body, struck name, diagonal strike mark.",
+      "html": "<div style=\"background:var(--board, #1c2530);padding:1rem\"><article class=\"ds-strip ds-action ds-rejected\"><div class=\"ds-strip-holder\"><span class=\"ds-callsign\">S-03</span><span>12:08</span><span class=\"ds-class\">Action</span></div><div class=\"ds-strip-body\"><h4 class=\"ds-tool\">Send an email</h4><p class=\"ds-id\">send_email</p></div><span class=\"ds-mark\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" stroke=\"var(--strip-ink, #10202a)\" stroke-width=\"2.5\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M5 23 23 5\"/></svg><span>Rejected</span></span></article></div>",
+      "css": ".ds-strip { --s: var(--lookup, #9fd3e6); --h: var(--lookup-holder, #7fc0d8); display:grid; grid-template-columns:3.75rem minmax(0,1fr) 3.5rem; width:22rem; background:var(--s); color:var(--strip-ink, #10202a); border-radius:var(--radius, 3px); box-shadow:0 1px 0 rgb(0 0 0 / 0.3), 0 8px 16px -10px rgb(0 0 0 / 0.7); font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); } .ds-strip.ds-action { --s: var(--action, #f4d35e); --h: var(--action-holder, #e3bb34); } .ds-strip.ds-rejected { --s: var(--rejected, #f2a7b5); --h: var(--rejected-holder, #e3899b); } .ds-strip.ds-rejected .ds-tool { text-decoration:line-through; text-decoration-thickness:2px; } .ds-strip.ds-failed .ds-strip-holder { background:var(--danger, #b42318); color:#fff; } .ds-strip-holder { display:flex; flex-direction:column; gap:2px; padding:0.75rem 0.5rem; background:var(--h); border-radius:var(--radius, 3px) 0 0 var(--radius, 3px); font-family:var(--face-cond, 'Barlow Semi Condensed', 'Arial Narrow', sans-serif); font-variant-numeric:tabular-nums; letter-spacing:0.02em; font-size:0.8125rem; line-height:1.2; } .ds-callsign { font-weight:700; font-size:1rem; } .ds-class { margin-top:0.25rem; font-weight:600; font-size:0.75rem; } .ds-strip-body { padding:0.75rem; min-width:0; } .ds-tool { margin:0; font-family:var(--face-cond, 'Barlow Semi Condensed', 'Arial Narrow', sans-serif); font-weight:700; font-size:1.1875rem; line-height:1.2; } .ds-id { margin:2px 0 0; font-family:var(--face-code, ui-monospace, Menlo, monospace); font-size:0.8125rem; color:rgb(16 32 42 / 0.78); } .ds-mark { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; padding:0.5rem 0.25rem; border-left:1px solid rgb(16 32 42 / 0.18); font-family:var(--face-cond, 'Barlow Semi Condensed', sans-serif); font-size:0.75rem; font-weight:600; } .ds-mark path { stroke-dasharray:32; animation:ds-draw 420ms cubic-bezier(0.16,1,0.3,1) both; } @keyframes ds-draw { from { stroke-dashoffset:32; } }"
+    },
+    {
+      "name": "Failed Strip",
+      "kind": "custom",
+      "refersTo": "strip-failed-holder",
+      "description": "System failure: the strip keeps its class colour, only the holder turns red.",
+      "html": "<div style=\"background:var(--board, #1c2530);padding:1rem\"><article class=\"ds-strip ds-failed\"><div class=\"ds-strip-holder\"><span class=\"ds-callsign\">S-04</span><span>12:08</span><span class=\"ds-class\">Lookup</span></div><div class=\"ds-strip-body\"><h4 class=\"ds-tool\">Search the documents</h4><p class=\"ds-id\">search_docs</p></div><span class=\"ds-mark\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" stroke=\"var(--danger, #b42318)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M14 5 24 22H4zM14 11v5M14 19v.01\"/></svg><span>Failed</span></span></article></div>",
+      "css": ".ds-strip { --s: var(--lookup, #9fd3e6); --h: var(--lookup-holder, #7fc0d8); display:grid; grid-template-columns:3.75rem minmax(0,1fr) 3.5rem; width:22rem; background:var(--s); color:var(--strip-ink, #10202a); border-radius:var(--radius, 3px); box-shadow:0 1px 0 rgb(0 0 0 / 0.3), 0 8px 16px -10px rgb(0 0 0 / 0.7); font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); } .ds-strip.ds-action { --s: var(--action, #f4d35e); --h: var(--action-holder, #e3bb34); } .ds-strip.ds-rejected { --s: var(--rejected, #f2a7b5); --h: var(--rejected-holder, #e3899b); } .ds-strip.ds-rejected .ds-tool { text-decoration:line-through; text-decoration-thickness:2px; } .ds-strip.ds-failed .ds-strip-holder { background:var(--danger, #b42318); color:#fff; } .ds-strip-holder { display:flex; flex-direction:column; gap:2px; padding:0.75rem 0.5rem; background:var(--h); border-radius:var(--radius, 3px) 0 0 var(--radius, 3px); font-family:var(--face-cond, 'Barlow Semi Condensed', 'Arial Narrow', sans-serif); font-variant-numeric:tabular-nums; letter-spacing:0.02em; font-size:0.8125rem; line-height:1.2; } .ds-callsign { font-weight:700; font-size:1rem; } .ds-class { margin-top:0.25rem; font-weight:600; font-size:0.75rem; } .ds-strip-body { padding:0.75rem; min-width:0; } .ds-tool { margin:0; font-family:var(--face-cond, 'Barlow Semi Condensed', 'Arial Narrow', sans-serif); font-weight:700; font-size:1.1875rem; line-height:1.2; } .ds-id { margin:2px 0 0; font-family:var(--face-code, ui-monospace, Menlo, monospace); font-size:0.8125rem; color:rgb(16 32 42 / 0.78); } .ds-mark { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; padding:0.5rem 0.25rem; border-left:1px solid rgb(16 32 42 / 0.18); font-family:var(--face-cond, 'Barlow Semi Condensed', sans-serif); font-size:0.75rem; font-weight:600; } .ds-mark path { stroke-dasharray:32; animation:ds-draw 420ms cubic-bezier(0.16,1,0.3,1) both; } @keyframes ds-draw { from { stroke-dashoffset:32; } }"
+    },
+    {
+      "name": "Empty Bay Slot",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "The approval bay as a physical slot when nothing waits.",
+      "html": "<div style=\"background:var(--board, #1c2530);padding:1rem;width:22rem\"><p class=\"ds-slot\">Empty slot. Actions that change something stop here before they run.</p></div>",
+      "css": ".ds-slot { margin:0; display:flex; align-items:center; min-height:5rem; padding:0.75rem 1rem 0.75rem calc(3.75rem + 1rem); border:1px dashed var(--board-rule, #34425a); border-radius:var(--radius, 3px); background:linear-gradient(to right, var(--board-2, #243041) 3.75rem, transparent 3.75rem); font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); font-size:0.9375rem; color:var(--board-ink-2, #9daab6); }"
+    },
+    {
+      "name": "Reference Row",
+      "kind": "chip",
+      "refersTo": "",
+      "description": "Conversation pointer to a strip: holder-stubbed chip, done-tense action, callsign.",
+      "html": "<div class=\"ds-ref\"><span class=\"ds-chip\" aria-hidden=\"true\"></span>Searched the documents<span class=\"ds-ref-cs\">strip S-01</span></div>",
+      "css": ".ds-ref { display:flex; align-items:center; gap:0.5rem; width:24rem; font-family:var(--face-text, 'Atkinson Hyperlegible Next', system-ui, sans-serif); font-size:0.9375rem; color:var(--ink-2, #4a5866); } .ds-chip { flex:none; width:1.75rem; height:0.75rem; border-radius:2px; background:var(--lookup, #9fd3e6); box-shadow:inset 0.5rem 0 0 var(--lookup-holder, #7fc0d8); } .ds-ref-cs { margin-left:auto; font-family:var(--face-cond, 'Barlow Semi Condensed', sans-serif); font-variant-numeric:tabular-nums; letter-spacing:0.02em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Clearance Strips",
+    "overview": "The interface borrows the air-traffic controller's flight progress strip board. The conversation is a light working ground where the operator reads; beside it stands a dark slate strip board where every tool the agent uses becomes a printed strip in a holder. Lookups land as cyan strips and are logged. An action with side effects arrives as a yellow strip in the approval bay and does not move until the operator clears or rejects it. Then a mark is drawn on the strip and it slides into the log.\n\nDensity is moderate and calm. Reading comes first: a single measure of about 34rem at 1.0625rem body in a highly legible humanist sans. The strips are condensed, numeric and ruled like the printed form they imitate. Colour carries meaning and nothing else: every hue on the board names a class of tool or a state, and the light side stays neutral so the strips are the only saturated objects on screen.\n\nThe identity lives entirely in the `:root` tokens of `app/globals.css`. Adopters rebrand by editing those tokens. Components read only the tokens, never literal hues.",
+    "keyCharacteristics": [
+      "Two grounds: light paper for the conversation, dark slate board for the strips.",
+      "Strips are flat coloured bodies with a darker holder stub on the left and a status mark on the right.",
+      "Colour is semantic and strict: cyan for lookups, yellow for actions, rose for human rejection, a red holder for system failure.",
+      "The plain-language action name leads. The tool id comes second, as a smaller line in the code face.",
+      "States are drawn marks (tick, diagonal strike, warning triangle, turning dashed ring), not badges.",
+      "One signature motion: on clearance the tick draws and the strip slides from the bay into the log."
+    ],
+    "rules": [
+      {
+        "name": "The Strict Semantics Rule",
+        "body": "Cyan means a read-only lookup. Yellow means an action with side effects. Rose means a human rejected it. A red holder means the system failed: the strip keeps its class colour and only the holder turns red. Never use these hues for decoration, emphasis or branding outside these meanings.",
+        "section": "colors"
+      },
+      {
+        "name": "The Single Source Rule",
+        "body": "Every colour a component uses comes from a `:root` token or a translucent derivative of one. Rebranding means editing `:root` only.",
+        "section": "colors"
+      },
+      {
+        "name": "The Quiet Paper Rule",
+        "body": "The conversation side carries no saturated colour except the small reference chips that point to a strip and the red of a failure. The board owns the colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Plain Words First Rule",
+        "body": "A strip's heading is the plain-language action (\"Send an email\") from `lib/i18n.ts`. The tool id (`send_email`) follows as a secondary code-face line. Never lead with the id, and never drop it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Stub Holds the Class Rule",
+        "body": "The class word (Action / Lookup) appears only in the holder stub, under the callsign and time. Never set it as an eyebrow or kicker above the action name.",
+        "section": "typography"
+      },
+      {
+        "name": "The Numerals Rule",
+        "body": "Every number that identifies or times something uses the condensed face with tabular figures, so strips in the log line up.",
+        "section": "typography"
+      },
+      {
+        "name": "The Physical Bay Rule",
+        "body": "The bay is a slot in the rack even when nothing waits. When empty it shows a dashed holder outline with a filled stub area and one plain sentence. It never collapses or disappears.",
+        "section": "layout"
+      },
+      {
+        "name": "The Reading Measure Rule",
+        "body": "Conversation text stays at about 34rem at 1.0625rem body. The board's width never squeezes it.",
+        "section": "layout"
+      },
+      {
+        "name": "The Only Strips Rule",
+        "body": "Only strips cast shadows. Buttons, fields, suggestion cards and message panels stay flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do lead every strip and reference row with the plain-language action from `lib/i18n.ts`, and keep the raw tool id as a secondary code-face line.",
+      "Do put the class word (Action / Lookup) in the holder stub, under the callsign and time.",
+      "Do keep colour semantics strict: cyan = lookup, yellow = action with side effects, rose = human rejection only, red holder = system failure.",
+      "Do keep the bay visible as a dashed, stubbed slot when nothing waits.",
+      "Do keep Approve and Reject sticky at the bottom of the pending strip, in the bay and in the dock.",
+      "Do hold conversation text at about 34rem and 1.0625rem body.",
+      "Do set every callsign, time, id and count in the condensed face with tabular figures.",
+      "Do show state as a drawn mark on the strip, and switch the focus outline to strip ink on strips.",
+      "Do rebrand by editing `:root` tokens only."
+    ],
+    "donts": [
+      "Don't set the class word, or any other label, as an eyebrow or kicker above a strip's action name or a heading.",
+      "Don't use rose for a system error or red for a human rejection.",
+      "Don't colour a failed strip red all over. It keeps its class colour and only the holder turns red.",
+      "Don't add status badges or pills to strips. The mark column carries state.",
+      "Don't shadow anything except strips.",
+      "Don't use an approval modal or an inline approval card in the conversation. Approval happens on the board, or in the dock on narrow screens.",
+      "Don't hard-code a hue in a component. Add or edit a `:root` token instead."
+    ]
+  }
+}

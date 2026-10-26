@@ -1,0 +1,173 @@
+{
+  "title": "Choose the visual world for the agent chat",
+  "question": "The roll assigned the Identity Program direction. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Identity Program",
+      "kicker": "THE ROLL",
+      "lineage": "Swiss/International Typographic Style corporate identity programs (Aicher, Müller-Brockmann)",
+      "thesis": "The agent run as a numbered, colour-coded programme: every step has a module, and actions with side effects wait in an orange field until a human clears them.",
+      "palette": ["#0E1A24", "#FFFFFF", "#E7F0F7", "#2F7FC1", "#F08A00", "#1E9B5B", "#B8C2CC"],
+      "materials": [
+        "strict modular grid",
+        "grotesk type at scale",
+        "flat colour fields",
+        "45/90° pictograms per tool"
+      ],
+      "viewport": "Blue programme rail on the left with numbered step modules; transcript on a strict baseline grid; a pending action fills an orange docket under the transcript, written as one plain sentence with its arguments as a key/value table.",
+      "risk": "Can read as a style exercise if the grid loosens or colour is used for decoration instead of state.",
+      "raised": [
+        {
+          "from": "Metro typographic tiles",
+          "raise": "One colour owns every live state: orange means 'waiting for you', nothing else is ever orange."
+        },
+        {
+          "from": "Streaming title wall",
+          "raise": "While an approval is pending, the rest of the transcript dims so the decision is the only lit thing."
+        },
+        {
+          "from": "Centre-rail reference setting",
+          "raise": "States are marks, not badges: hairline at rest, filled when cleared, struck through when rejected."
+        },
+        {
+          "from": "Orienteering map",
+          "raise": "Tool output rides as its own layer, never in the agent's voice: a separate, labelled, inset band."
+        },
+        {
+          "from": "Variable font specimen",
+          "raise": "Hierarchy by scale contrast alone: no bubbles or shadows, only size, weight and the grid."
+        }
+      ],
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          { "label": "programme rail · numbered steps", "x": 0, "y": 0, "w": 3, "h": 10, "accent": true },
+          { "label": "header · thread and tenant", "x": 3, "y": 0, "w": 9, "h": 1 },
+          { "label": "transcript on baseline grid", "x": 3, "y": 1, "w": 9, "h": 5 },
+          { "label": "orange approval docket", "x": 3, "y": 6, "w": 9, "h": 3, "accent": true },
+          { "label": "composer", "x": 3, "y": 9, "w": 9, "h": 1 }
+        ]
+      }
+    },
+    {
+      "id": "model-pick",
+      "label": "Clearance Strips",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "air traffic control flight progress strips",
+      "thesis": "Every agent action is a strip on a board, and nothing moves until a human gives it clearance.",
+      "palette": ["#1C2530", "#9FD3E6", "#F4D35E", "#F2A7B5", "#111111", "#FFFFFF"],
+      "materials": ["coloured paper strips in holders", "condensed numerals", "hand-ticked marks"],
+      "viewport": "Conversation on the left; on the right a strip board where each tool call is a coloured strip, pending ones in the 'awaiting clearance' bay with Approve and Reject.",
+      "risk": "The most literal reading of 'approval': it is where many runs would land, and it can become a costume of a control-tower tool.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          { "label": "conversation", "x": 0, "y": 0, "w": 7, "h": 9 },
+          { "label": "strip board · awaiting clearance", "x": 7, "y": 0, "w": 5, "h": 6, "accent": true },
+          { "label": "cleared strips", "x": 7, "y": 6, "w": 5, "h": 4 },
+          { "label": "composer", "x": 0, "y": 9, "w": 7, "h": 1 }
+        ]
+      }
+    },
+    {
+      "id": "challenger-transit",
+      "label": "Transit Line",
+      "verdict": "competitive",
+      "lineage": "metropolitan rail diagrams",
+      "thesis": "The run is a line on a transit map: every step a station, an action with side effects a closed interchange you open by approving.",
+      "palette": ["#10204A", "#F4F7FB", "#E0322B", "#2E6BE6", "#F2A900", "#2BA24C"],
+      "materials": ["enamel ground", "45/90° line geometry", "interchange circles"],
+      "viewport": "A vertical line down the left with a station per step; the pending action is an amber interchange that expands into the decision panel.",
+      "case": "Holds product clarity (the run's progress reads at a glance), but office operators identify less with it than with an office identity programme.",
+      "risk": "The map can upstage the conversation if stations grow larger than the text."
+    },
+    {
+      "id": "challenger-metro",
+      "label": "Metro Tiles",
+      "verdict": "declined",
+      "lineage": "metro typographic tiles",
+      "thesis": "Flat colour tiles and giant cropped lowercase as the interface.",
+      "palette": ["#000000", "#00ABA9", "#FFFFFF"],
+      "materials": ["flat tiles", "cropped display type"],
+      "viewport": "Panorama of tiles with giant lowercase headings.",
+      "case": "Cropped display type fights reading long answers; operators do not need a panorama.",
+      "risk": "Legibility of long text.",
+      "kept": "One colour owns every live state."
+    },
+    {
+      "id": "challenger-wall",
+      "label": "Title Wall",
+      "verdict": "declined",
+      "lineage": "streaming catalog walls",
+      "thesis": "Rows of tiles where the focused one expands and the rest dim.",
+      "palette": ["#141414", "#E50914", "#FFFFFF"],
+      "materials": ["poster tiles", "focus lift"],
+      "viewport": "Horizontal rows of tool calls.",
+      "case": "A chat is a single thread, not a catalogue to browse.",
+      "risk": "Wrong topology for a conversation.",
+      "kept": "Dim everything except the pending decision."
+    },
+    {
+      "id": "challenger-centre-rail",
+      "label": "Centre-Rail Setting",
+      "verdict": "declined",
+      "lineage": "reference-setting with a centre key rail",
+      "thesis": "Two text columns around a rail of keys, states as printed marks.",
+      "palette": ["#1A1A1A", "#E04A2F", "#EFE9DD"],
+      "materials": ["hairline rules", "small caps apparatus"],
+      "viewport": "Twin columns with a vermilion rail.",
+      "case": "Bookish and dense; operators would read it as a document, not a tool.",
+      "risk": "Lands near the cream-and-vermilion default.",
+      "kept": "States are marks: hairline, filled, struck."
+    },
+    {
+      "id": "challenger-orienteering",
+      "label": "Orienteering Map",
+      "verdict": "declined",
+      "lineage": "ISOM orienteering maps",
+      "thesis": "Terrain below, a purple course above that never edits the terrain.",
+      "palette": ["#FFFFFF", "#7A9A3A", "#F5D23A", "#8B5A2B", "#A0198F"],
+      "materials": ["contour texture", "control circles"],
+      "viewport": "A map with the run drawn as a course.",
+      "case": "Few operators know the notation; the metaphor needs explaining.",
+      "risk": "Ornamental contours on a working screen.",
+      "kept": "Untrusted output is a separate layer that never edits the agent's voice."
+    },
+    {
+      "id": "challenger-specimen",
+      "label": "Type Specimen",
+      "verdict": "declined",
+      "lineage": "variable font specimens",
+      "thesis": "Giant letterforms, tiny mono labels, hierarchy by scale alone.",
+      "palette": ["#FAFAFA", "#111111", "#3B5BDB"],
+      "materials": ["flat paper", "axis sliders"],
+      "viewport": "One giant glyph and a glyph grid.",
+      "case": "No product fact maps to font axes.",
+      "risk": "Decorative on a working screen.",
+      "kept": "Hierarchy by scale contrast alone."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A centred chat column like the leading assistants, with an inline approval card, executed impeccably.",
+    "palette": ["#FFFFFF", "#F4F4F5", "#18181B", "#2563EB"],
+    "materials": ["centred column", "message bubbles", "inline cards"],
+    "viewport": "Centred conversation, composer pinned at the bottom, approval as a card inside the thread.",
+    "risk": "Indistinguishable from every other agent demo by design.",
+    "wireframe": {
+      "cols": 12,
+      "rows": 10,
+      "regions": [
+        { "label": "conversation column", "x": 3, "y": 0, "w": 6, "h": 7 },
+        { "label": "approval card", "x": 3, "y": 7, "w": 6, "h": 2, "accent": true },
+        { "label": "composer", "x": 3, "y": 9, "w": 6, "h": 1 }
+      ]
+    }
+  },
+  "steer": true
+}
