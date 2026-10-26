@@ -1,5 +1,5 @@
 # Build from the repository root: docker build -f apps/api/Dockerfile .
-FROM node:22-alpine AS build
+FROM node:26-alpine AS build
 RUN corepack enable
 WORKDIR /repo
 COPY . .
@@ -9,7 +9,7 @@ RUN pnpm install --frozen-lockfile \
  && rm -rf /app/src /app/test \
  && cp -R apps/api/dist /app/dist
 
-FROM node:22-alpine
+FROM node:26-alpine
 WORKDIR /app
 COPY --from=build --chown=node:node /app /app
 ENV NODE_ENV=production
