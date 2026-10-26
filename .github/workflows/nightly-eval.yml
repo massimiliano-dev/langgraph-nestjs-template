@@ -1,0 +1,62 @@
+name: Nightly eval
+
+# Runs the eval dataset against the real model. Costs money: a few cents per run with a small model.
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nightly-eval
+  cancel-in-progress: false
+
+jobs:
+  eval:
+    name: Live eval against the configured model
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      # Forks and fresh copies of the template have no secrets: skip with a notice instead of failing.
+      - name: Check for model credentials
+        id: creds
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+        run: |
+          if [ -n "$OPENAI_API_KEY" ] || [ -n "$AZURE_OPENAI_API_KEY" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::No model credentials configured (OPENAI_API_KEY or AZURE_OPENAI_API_KEY): live evals skipped."
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.creds.outputs.available == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - if: steps.creds.outputs.available == 'true'
+        uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - if: steps.creds.outputs.available == 'true'
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: pnpm
+      - if: steps.creds.outputs.available == 'true'
+        run: pnpm install --frozen-lockfile
+      # Secrets are exposed to this step only. The runner prints case ids and pass/fail reasons, never content.
+      - if: steps.creds.outputs.available == 'true'
+        name: Run live evals
+        env:
+          EVAL_LIVE: '1'
+          EVAL_MIN_SCORE: ${{ vars.EVAL_MIN_SCORE || '0.8' }}
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER || 'openai' }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_ENDPOINT: ${{ vars.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_DEPLOYMENT: ${{ vars.AZURE_OPENAI_DEPLOYMENT }}
+          AZURE_OPENAI_API_VERSION: ${{ vars.AZURE_OPENAI_API_VERSION || '2024-10-21' }}
+          AZURE_OPENAI_MODEL: ${{ vars.AZURE_OPENAI_MODEL }}
+        run: pnpm eval

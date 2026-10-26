@@ -1,0 +1,31 @@
+# Minimal OpenTelemetry Collector: receives OTLP from the API and prints spans to its log.
+# Replace the debug exporter with your backend (Grafana Tempo, Jaeger, Honeycomb, Azure Monitor...).
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch: {}
+  # Defense in depth: drop content attributes even if OTEL_CAPTURE_CONTENT was turned on by mistake.
+  # Remove this processor only if you have decided to store prompts and tool arguments.
+  attributes/strip-content:
+    actions:
+      - key: llm.output
+        action: delete
+      - key: tool.args
+        action: delete
+      - key: agent.input
+        action: delete
+
+exporters:
+  debug:
+    verbosity: basic
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [attributes/strip-content, batch]
+      exporters: [debug]

@@ -1,0 +1,18 @@
+{
+  "caseId": "side-effect-interrupts",
+  "model": "gpt-4.1-mini",
+  "source": "seed",
+  "responses": [
+    {
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_seed_email_1",
+          "name": "send_email",
+          "args": { "to": "ops@example.com", "subject": "Deploy", "body": "The deploy finished." }
+        }
+      ],
+      "usage": { "input_tokens": 430, "output_tokens": 35 }
+    }
+  ]
+}

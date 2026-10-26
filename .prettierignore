@@ -1,0 +1,6 @@
+dist
+coverage
+.next
+next-env.d.ts
+pnpm-lock.yaml
+evals/recordings

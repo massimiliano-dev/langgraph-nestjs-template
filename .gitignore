@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+*.crt
+# Raw, unscrubbed eval output must never be committed. Only evals/recordings/*.json (scrubbed) is tracked.
+evals/.raw/

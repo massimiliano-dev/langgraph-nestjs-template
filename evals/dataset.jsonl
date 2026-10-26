@@ -1,0 +1,3 @@
+{"id":"answer-question","input":"In one short sentence: what does HTTP status code 404 mean?","expect":{"type":"answer","contains":["not found"]}}
+{"id":"read-only-tool","input":"Check the help center: how many days do customers have to request a refund?","expect":{"type":"tool","tool":"search_docs","contains":["30"]}}
+{"id":"side-effect-interrupts","input":"Send an email to ops@example.com with subject \"Deploy\" saying the deploy finished.","expect":{"type":"interrupt","tool":"send_email"}}

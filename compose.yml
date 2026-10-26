@@ -1,0 +1,64 @@
+# Local stack: PostgreSQL, OpenTelemetry Collector, API and web chat.
+#   cp .env.example .env   # then fill in OPENAI_API_KEY (or Azure) and generate API_KEYS / AGENT_API_KEY
+#   docker compose up --build
+# Every port is bound to 127.0.0.1: nothing is reachable from your network.
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: agent
+      # Local-only default. Never reuse it anywhere else.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-dev-only-password}
+      POSTGRES_DB: agent
+    ports: ['127.0.0.1:${POSTGRES_PORT:-5432}:5432']
+    volumes: ['pgdata:/var/lib/postgresql/data']
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U agent -d agent']
+      interval: 2s
+      retries: 30
+
+  otel-collector:
+    image: otel/opentelemetry-collector:0.163.2
+    command: ['--config=/etc/otelcol/config.yaml']
+    volumes: ['./infra/otel-collector.yaml:/etc/otelcol/config.yaml:ro']
+    ports: ['127.0.0.1:4318:4318']
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+      otel-collector:
+        condition: service_started
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://agent:${POSTGRES_PASSWORD:-local-dev-only-password}@postgres:5432/agent
+      HOST: 0.0.0.0
+      PORT: '3000'
+      OTEL_ENABLED: 'true'
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+    ports: ['127.0.0.1:3000:3000']
+    read_only: true
+    tmpfs: ['/tmp']
+    cap_drop: [ALL]
+    security_opt: ['no-new-privileges:true']
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    depends_on: [api]
+    environment:
+      AGENT_API_URL: http://api:3000
+      AGENT_API_KEY: ${AGENT_API_KEY:?set AGENT_API_KEY in .env}
+      AGENT_DEMO_TENANT_ID: ${AGENT_DEMO_TENANT_ID:-demo}
+    ports: ['127.0.0.1:3001:3001']
+    read_only: true
+    tmpfs: ['/tmp', '/app/apps/web/.next/cache']
+    cap_drop: [ALL]
+    security_opt: ['no-new-privileges:true']
+
+volumes:
+  pgdata:
