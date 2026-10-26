@@ -12,6 +12,9 @@ updates:
       opentelemetry:
         patterns: ['@opentelemetry/*']
     ignore:
+      # types must match the minimum supported Node (22)
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
       # typescript-eslint does not support TypeScript 7 yet.
       - dependency-name: 'typescript'
         update-types: ['version-update:semver-major']
@@ -23,6 +26,11 @@ updates:
     directories: ['/apps/api', '/apps/web']
     schedule:
       interval: weekly
+    ignore:
+      # Images must run a Node version CI tests (22, 24). Move majors deliberately.
+      - dependency-name: 'node'
+        update-types: ['version-update:semver-major']
+
   - package-ecosystem: docker-compose
     directory: /
     schedule:

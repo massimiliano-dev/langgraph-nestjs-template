@@ -95,7 +95,8 @@ function lastAiMessage(messages: BaseMessage[]): AIMessage | undefined {
 export function wrapUntrusted(tool: string, output: string): string {
   const clipped =
     output.length > MAX_TOOL_OUTPUT_CHARS ? `${output.slice(0, MAX_TOOL_OUTPUT_CHARS)} [truncated]` : output;
-  const safe = clipped.replace(/<\/?\s*tool_output/gi, (m) => m.replace('<', '&lt;'));
+  // Every match starts with "<": escape that character so the model cannot see a closing/opening wrapper tag.
+  const safe = clipped.replace(/<\/?\s*tool_output/gi, (m) => `&lt;${m.slice(1)}`);
   return `<tool_output tool="${tool}">\n${safe}\n</tool_output>`;
 }
 
