@@ -4,7 +4,7 @@
 # Every port is bound to 127.0.0.1: nothing is reachable from your network.
 services:
   postgres:
-    image: postgres:17-alpine
+    image: postgres:18-alpine
     environment:
       POSTGRES_USER: agent
       # Local-only default. Never reuse it anywhere else.
